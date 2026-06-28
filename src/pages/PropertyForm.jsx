@@ -35,6 +35,8 @@ export default function PropertyForm() {
         setForm({
           name: p.name,
           location: p.location,
+          phase: p.phase || '',
+          coordinates: p.coordinates || '',
           pricePerSqYard: p.pricePerSqYard,
           totalPrice: p.totalPrice || '',
           size: p.size,
@@ -205,6 +207,29 @@ export default function PropertyForm() {
                       <option key={c.value} value={c.value}>{c.label}</option>
                     ))}
                   </select>
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="phase">Phase</label>
+                  <input
+                    id="phase"
+                    name="phase"
+                    value={form.phase}
+                    onChange={handleChange}
+                    placeholder="e.g. Phase 1"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="coordinates">Coordinates (Map Location)</label>
+                  <input
+                    id="coordinates"
+                    name="coordinates"
+                    value={form.coordinates}
+                    onChange={handleChange}
+                    placeholder="e.g. 17.3850, 78.4867"
+                  />
                 </div>
               </div>
             </section>

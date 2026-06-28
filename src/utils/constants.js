@@ -27,6 +27,8 @@ export const TYPE_TO_CATEGORY = {
 export const emptyProperty = {
   name: '',
   location: '',
+  phase: '',
+  coordinates: '',
   pricePerSqYard: '',
   totalPrice: '',
   size: '',
